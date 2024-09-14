@@ -6,6 +6,9 @@ class Tracking:
         if not validators.url(product_url):
             raise ValueError("Must be a valid URL")
 
+        if not isinstance(goal, (int, float)):
+            raise ValueError("Must be a valid GOAL")
+
         self.user_id = user_id
         self.product_url = product_url
         self.goal = goal
