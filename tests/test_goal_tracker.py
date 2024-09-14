@@ -1,4 +1,4 @@
-from goal import Tracking, GoalChecker
+from model.goal import Tracking, GoalChecker
 
 
 def test_goal_tracker_check_goal():

@@ -1,5 +1,4 @@
 import validators
-from price import Prices
 
 
 class Tracking:
@@ -22,15 +21,3 @@ class GoalChecker:
     def check_goal(self, tracking):
         price = self.prices.get_price(tracking.product_url)
         return price <= tracking.goal
-
-
-prices = Prices()
-tracker = GoalChecker(prices)
-
-
-def check_goal(tracking):
-    if tracker.check_goal(tracking):
-        price = prices.get_price(tracking.product_url)
-        return price, True
-
-    return None, False

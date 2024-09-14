@@ -6,3 +6,4 @@ flake8
 pytest
 pre-commit
 validators
+selenium

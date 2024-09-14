@@ -1,5 +1,5 @@
 import pytest
-from goal import Tracking
+from model.goal import Tracking
 
 
 def test_tracking_created_with_invalid_url():
