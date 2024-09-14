@@ -4,3 +4,4 @@ beautifulsoup4
 flake8
 pytest
 pre-commit
+validators
