@@ -15,9 +15,5 @@ class Tracking:
 
 
 class GoalChecker:
-    def __init__(self, prices):
-        self.prices = prices
-
-    def check_goal(self, tracking):
-        price = self.prices.get_price(tracking.product_url)
-        return price <= tracking.goal
+    def check_goal(self, tracking, current_price):
+        return current_price <= tracking.goal

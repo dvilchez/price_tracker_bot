@@ -2,7 +2,7 @@ import os
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes, CallbackContext
 from model.goal import Tracking
-from services.goal import check_goal
+from services.check_goal import check_goal
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 
@@ -17,8 +17,8 @@ async def check(context: CallbackContext):
 
     price, goal_reached = check_goal(tracking)
     if goal_reached:
-        context.bot.send_message(tracking.user_id,
-                                 f"Price is {price}! Goal reached!")
+        await context.bot.send_message(tracking.user_id,
+                                       f"Price is {price}! Goal reached!")
 
 
 async def track_product(update: Update,
